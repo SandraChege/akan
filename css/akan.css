@@ -25,8 +25,7 @@ background-color: rgba(0, 0, 0, 0.3);
     left: 20px;
     line-height: 35px;
     font-size: 1.4rem;
-    
-}
+} 
 .intro{
     /*font-size: 2rem;*/
     font-style: italic;
@@ -56,18 +55,45 @@ background-color: rgba(0, 0, 0, 0.3);
 }
 header{
     font-size: 3rem;
+    text-transform: uppercase;
     font-weight: 900;
     text-align: center;
     padding: 5px;
     margin: 5px;
-    text-decoration: underline solid black;
+    text-decoration: underline solid ;
 }
+.textanimate{
+    -webkit-box-reflect: below -8px linear-gradient( transparent, rgba(0, 0, 0, 0.2));
+}
+
+.textanimate{
+    animation-name: change-color, grow-shrink, expand;
+    animation-duration: 8s, 5s, 5s;
+    animation-iteration-count: infinite;
+  
+    font-family: Avenir;
+    font-size: 26px;
+    text-align: center;
+  }
+  
+  @keyframes change-color {
+    25% { color: #00A4BD; }
+    50% { color: #FF7A59; }
+    75% { color: #00BDA5; }
+  }
+  
+  @keyframes grow-shrink {
+    50% { transform: scale(1.5); }
+  }
+  
+  @keyframes expand {
+    50% { word-spacing: 20px; }
+  }
 .akanhistory{
     font-size: 1.3rem;
     padding: 5px;
-    margin: 8px 5px;
+    margin: 45px 5px 8px 5px;
     line-height: 30px;
-
 }
 .History1, p{
     font-size: 1.3rem;
@@ -83,24 +109,42 @@ table{
 table, tr, th, td {
     border: 1px solid black;
     border-collapse: collapse;
+    height: 50px;
 }
 tr{
     padding: 5px;
     margin: 5px;
     text-align: center;
 }
+tr:nth-child(even) {
+    background-color: #ABA8A9;
+}
+mark{ 
+    background-color: #CBF83E;
+}
+/*FORM*/
 .form1{
     font-size: 1.3rem;
     padding-left: 5px;
+    width: 600px;
+}
+.form1 > p{
+    padding-left: 280px;
 }
 .formdetail{
 display: flex;
 flex-direction: column;
+justify-content: center;
+padding-left: 300px;
 }
 #birthday{
-    width: 10rem;
-    padding: 0.2rem;
+    width: 30rem;
+    padding: 10px;
     margin-left: 5px;
+    margin-top: 5px;
+}
+#male, #female{
+    margin-bottom: 10px;
 }
 .results{
     width: 10rem;
@@ -110,8 +154,16 @@ flex-direction: column;
     color: white;
     font-size: 1.2rem;
 }
+.results:hover{
+    background-color: #CBF83E;
+    color: black;
+    border-color: #CBF83E;
+}
 .radio{
     line-height: 30px;
+}
+.daybirth, .jinsia{
+    margin-bottom: 10px;
 }
 /*FOOTER*/
 footer{
